@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.cdnfonts.com/css/kubos" rel="stylesheet">
+    <title>Aplicación</title>
+    <!--CSS-->
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/kubos');
+        *{
+            
+            margin:0px;
+            color: darkcyan;
+        }
+        body{
+            background-color: darkcyan;
+        }
+        a{
+            text-decoration:none;
+        }
+        .selector{
+            background-color: grey;
+            text-align: center;
+            height: 50px;
+            gap: 10px;
+            padding: 20px;
+        }
+        .btnRegistrar{
+            background-color:darkcyan;
+            border-radius: 70px;
+            height:40px;
+            width: 180px;
+            font-family: 'Kubos', sans-serif;
+            color: antiquewhite;
+            
+        }
+        .btnRegistrar:hover{
+            background-color:cyan;
+            border-radius: 70px;
+            height:40px;
+            width: 180px;
+            font-family: 'Kubos', sans-serif;
+            color: antiquewhite;
+            
+        }
+        .btnLogin{
+            background-color:darkcyan;
+            border-radius: 70px;
+            height:40px;
+            width: 100px;
+            font-family: 'Kubos', sans-serif;
+            color: antiquewhite;
+            margin-left: 50px;
+            
+        }
+        .btnLogin:hover{
+            background-color:cyan;
+            border-radius: 70px;
+            height:40px;
+            width: 100px;
+            font-family: 'Kubos', sans-serif;
+            color: white;
+            margin-left: 50px;
+        }
+        .imgFondo{
+            height:220px;
+            width: 220px;
+            margin-top: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!--cabecera-->
+    <div class="selector">
+        <a href="formRegistro.html"><button class="btnRegistrar">registrarse</button></a>
+        <a href="formLogin.html"><button class="btnLogin">login</button></a>
+    </div>
+    <hr>
+    <!--cuerpo-->
+    <div class="cuerpo" align="center">
+        <img src="img/candado.png" class="imgFondo">
+    </div>
+</body>
+</html>

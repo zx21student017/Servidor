@@ -1,0 +1,88 @@
+ejercicio3.py
+
+1001 => ["KIPRUTO, RHONEX",3469]
+1002 => ["KIPLIMO, JACOB",3457]
+1003 => ["KANDIE, KIBIWOTT",	3452]
+1007 => ["MUTISO, ALEXANDER",3479]
+1008 => ["WANDERS, JULIEN",3595]
+1009 => ["KIPLIMO, PHILEMON",3491]
+====================================================================
+ejercicio4.py
+
+<form action="acumulaPuntos.py" method="get" >
+	Puntos: <input type="text" name="puntos" /><br>
+	<input type="submit" value="enviar" />
+</form>
+====================================================================
+ejercicio5.py
+
+Maria 7
+Isabel 8 
+Juan 4
+Pepe 9
+Jorge 3
+Ana 2
+--------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Separa</title>
+	</head>
+	<body>
+		<hr />
+		<form action="separa.py" method="get">
+		<input type="submit" value="separa" />
+		</form>
+		<hr />
+	</body>
+</html>
+====================================================================
+ejercicio6.py
+
+CREATE TABLE comprador(
+	id INT(6) AUTO_INCREMENT NOT NULL,
+	dni VARCHAR(20) NOT NULL UNIQUE,
+	CONSTRAINT pk_comprador PRIMARY KEY(id)
+	)ENGINE=InnoDb
+	CHARACTER SET latin1
+	COLLATE latin1_spanish_ci;
+
+CREATE TABLE entradas(
+	id INT(6) AUTO_INCREMENT NOT NULL,
+	numAdultos INT(3) NOT NULL,
+numMenores INT(3) NOT NULL,
+	total  FLOAT(2) NOT NULL,
+	id_comprador INT(6) NOT NULL,
+	CONSTRAINT pk_entradas PRIMARY KEY(id),
+	CONSTRAINT fk_entradas_comprador FOREIGN KEY(id_comprador) REFERENCES comprador(id)
+	)ENGINE=InnoDb
+	CHARACTER SET latin1
+	COLLATE latin1_spanish_ci;
+
+INSERT INTO comprador(dni) VALUES ("12345678D");
+INSERT INTO comprador(dni) VALUES ("87654321F");
+--------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registro de venta de entradas</title>
+	</head>
+	<body>
+		<hr />
+		Insertar venta:<br />
+		<form action="insertaVentaBD.py" method="get">
+			Dni: <input type="text" name="dni"/><br />
+			Número de adultos: <input type="text" name="adultos"/><br />
+			Número de menores: <input type="text" name="menores"/><br />
+			<input type="submit" value="Registrar venta" />
+		</form>
+		<hr />
+		Listado de ventas: <br />
+		<form action="listadoVentasBD.py" method="get">
+			<input type="submit" value="Listado ventas" />
+		</form>
+		<hr />
+	</body>
+</html>
+
+
